@@ -1,0 +1,35 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.mainBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.Login_box {
+  border-radius: 10px;
+  background-color: rgba(255, 192, 203, 0.431);
+  display: flex;
+  height: 50vh;
+  align-content: center;
+  width: 46.2962963vw;
+  justify-content: space-between;
+  flex-flow: column wrap;
+}
+.Login_box h1 {
+  text-align: center;
+}
+.Login_box .controller {
+  display: flex;
+  height: 25%;
+  justify-content: space-around;
+}
+.Login_box .controller button {
+  height: 2rem;
+  border: 0px;
+  background-color: transparent;
+}
+/*# sourceMappingURL=./index.css.map */

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+// 登录组件
+import Input from './Component/Login/Input'
+import Error from './Component/error/error'
+ import { Route,Router,Switch, BrowserRouter,Navigate } from 'react-router-dom'
+import router from './Router/Router'
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+       <Switch>
+        {/* <Route path="/login" element={<Input/>}  />
+        <Route path="/*" element={<Error/>}/> */}
+
+        {/* 循环路由组件数组 */}
+        {
+          router.map((router,index)=>{
+            return <Route path={router.path} component={router.component}  key={index}/>
+          })
+        }
+        </Switch>
+      </BrowserRouter>
+
     </div>
   );
 }
